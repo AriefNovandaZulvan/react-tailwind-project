@@ -10,6 +10,8 @@ const config: Config = {
       colors: {
         background: 'var(--background)',
         foreground: 'var(--foreground)',
+        tealHome: "#40E2E8",
+        footerBG: "#FBFBFB",
       },
     },
   },

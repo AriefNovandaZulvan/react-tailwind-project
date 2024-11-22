@@ -1,15 +1,14 @@
-import Head from 'next/head';
+import React from 'react';
+import Header from '../components/organisms/Header';
+import MainSection from '@/components/templates/MainSection';
+import Footer from '@/components/organisms/Footer';
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <>
-      <Head>
-        <title>Hyperhire</title>
-        <meta name="description" content="Hyperhire hiring platform" />
-      </Head>
-      <main className="bg-gradient-to-br from-cyan-500 to-blue-500 text-white min-h-screen">
-      
-      </main>
-    </>
+    <div className='from-cyan-500 to-teal-500 w-screen'>
+      <Header />
+      <MainSection />
+      <Footer />
+    </div>
   );
 }

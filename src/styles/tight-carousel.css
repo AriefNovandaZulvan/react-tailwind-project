@@ -1,0 +1,13 @@
+.slick-slide-content {
+    transform: scale(0.5); /* Smaller size for all slides */
+    opacity: 0.6; /* Blur effect for non-centered slides */
+    transition: transform 0.3s ease, filter 0.3s ease; /* Smooth transition */
+    z-index: 2;
+}
+
+.slick-center .slick-slide-content{
+    z-index: 3;
+    transform: scale(1); /* Larger size for the centered slide */
+    opacity: 1;
+}
+
