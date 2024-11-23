@@ -4,21 +4,23 @@ import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import CarouselCard from '../molecules/CarouselCard';
+import CarouselCard from '../molecules/HighLightCard';
 
-interface IconButtonListProps {
-  items: { title: string; icon: string }[];
+interface HighLightListProps {
+  items: { title: string; image: string }[];
 }
 
-const IconButton: React.FC<IconButtonListProps> = ({ items }) => {
+const HighLightList: React.FC<HighLightListProps> = ({ items }) => {
   const settings = {
     dots: false,
     infinite: true,
+    arrows: false,       
     speed: 500,
     slidesToShow: 5,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 5000,
+    left:true,
     responsive: [
       {
         breakpoint: 1024,
@@ -44,12 +46,12 @@ const IconButton: React.FC<IconButtonListProps> = ({ items }) => {
   return (
     <Slider {...settings}>
       {items.map((item, index) => (
-        <div key={index} className="px-4">
-          <CarouselCard icon={item.icon} title={item.title} />
+        <div key={index} className="pr-2">
+          <CarouselCard image={item.image} title={item.title} />
         </div>
       ))}
     </Slider>
   );
 };
 
-export default IconButton;
+export default HighLightList;

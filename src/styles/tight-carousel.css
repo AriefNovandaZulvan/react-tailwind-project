@@ -1,13 +1,27 @@
-.slick-slide-content {
-    transform: scale(0.5); /* Smaller size for all slides */
-    opacity: 0.6; /* Blur effect for non-centered slides */
-    transition: transform 0.3s ease, filter 0.3s ease; /* Smooth transition */
-    z-index: 2;
+.card-list .slick-slide {
+    transition: all 0.3s ease; /* Animasi halus */
 }
 
-.slick-center .slick-slide-content{
-    z-index: 3;
-    transform: scale(1); /* Larger size for the centered slide */
-    opacity: 1;
+.card-list .slick-center {
+    opacity: 1; /* Kartu tengah tidak transparan */
+    transform: scale(1); /* Perbesar kartu tengah */
+    z-index: 20; /* Letakkan kartu tengah di atas */
+    position: relative;
+    margin-right: -5%;
 }
 
+.card-list .slick-slide:not(.slick-center) {
+    z-index: 5; /* Kartu lainnya lebih rendah */
+    transform: scale(0.9); /* Perkecil kartu lainnya */
+    display: inline;
+    z-index: 10;
+    position: relative;
+    margin-right: -2.5%;
+    margin-left: 2.5%;
+}
+.slick-slide{
+    margin-left: 0px;
+}
+[aria-hidden="true"] {
+    z-index: 10;
+}

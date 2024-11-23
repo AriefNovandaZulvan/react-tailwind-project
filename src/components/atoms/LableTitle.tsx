@@ -7,13 +7,13 @@ interface LableTitleProps {
 
 const LableTitle: React.FC<LableTitleProps> = ({ text, isHighlight }) => {
   return (
-    <h1
-      className={`text-lg sm:text-lg md:text-xl lg:text-3xl xl:text-5xl font-bold ${
+    <h2
+      className={`text-lg md:text-5xl font-bold mt-1 ${
         isHighlight ? 'text-blue-900' : 'text-white'
       }`}
     >
       {text}
-    </h1>
+    </h2>
   );
 };
 

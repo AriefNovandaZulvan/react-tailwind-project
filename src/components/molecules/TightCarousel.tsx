@@ -15,19 +15,14 @@ interface CarouselProps extends PropsWithChildren {
 
 const TightCarousel: React.FC<CarouselProps> = ({ children, settings }) => {
   const defaultSettings: Settings = {
-    dots: true,
+    dots: false,
     infinite: true,
-    speed: 500,
-    slidesToShow: 3,
+    speed: 1000,
+    slidesToShow: 2,
     slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
+    centerMode: true,
+    centerPadding: "0",
+    focusOnSelect: true,
   };
 
   return <Slider {...(settings || defaultSettings)}>{children}</Slider>;

@@ -1,18 +1,22 @@
 import React from 'react';
-import ImageIcon from '../atoms/ImageIcon';
+import Icon from '../atoms/ImagePlacer';
+import Text from '../atoms/SpanText';
+import LinkLable from '../atoms/LinkLable';
 
-interface IconButtonProps {
-  icon: React.ReactNode;
-  text: string;
+interface CardProps {
+  iconSrc: string;
+  title: string;
+  link: string;
 }
 
-const IconButton: React.FC<IconButtonProps> = ({ icon, text }) => {
+const Card: React.FC<CardProps> = ({ iconSrc, title, link }) => {
   return (
-    <div className="flex items-center gap-2 bg-white shadow-md rounded-lg p-3 hover:shadow-lg transition">
-      <ImageIcon children={icon} />
-      <span className="text-sm font-medium">{text}</span>
+    <div className="bg-white p-5 rounded-lg shadow-md text-left space-y-4">
+      <Icon source={iconSrc} alt='' className='bg-footerBG mb-4'/>
+      <Text className="font-bold text-sm">{title}</Text>
+      <LinkLable children="바로가기" className='block text-sm'/>
     </div>
   );
 };
 
-export default IconButton;
+export default Card;
