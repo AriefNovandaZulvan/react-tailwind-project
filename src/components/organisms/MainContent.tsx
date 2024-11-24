@@ -8,7 +8,7 @@ import SpanText from '../atoms/SpanText';
 
 const MainContent: React.FC = () => {
   return (
-    <section className="w-11/12 flex flex-col space-y-9">
+    <section className="w-full md:11/12 flex flex-col space-y-9">
       <div className="bg-white rounded-lg w-fit p-1 px-4">
         <SpanText children="풀타임, 파트타임" className='text-tealHome font-bold'/>
       </div>

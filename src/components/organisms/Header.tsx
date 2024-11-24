@@ -11,7 +11,7 @@ const Header: React.FC = () => {
         console.log("Button clicked!");
     };
     return (
-        <header className="w-8/12 m-auto flex justify-between items-center">
+        <header className="w-full md:w-8/12 m-auto flex justify-between items-center">
             <ImagePlacer source={logoheader.src} alt='Hyper Hire Header Logo'/>
             <Navigation />
             <Button label="문의하기" onClick={handleClick} />

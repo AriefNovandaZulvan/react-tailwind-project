@@ -7,20 +7,17 @@
     transform: scale(1); /* Perbesar kartu tengah */
     z-index: 20; /* Letakkan kartu tengah di atas */
     position: relative;
-    margin-right: -5%;
+    margin-right: -10%;
 }
 
 .card-list .slick-slide:not(.slick-center) {
     z-index: 5; /* Kartu lainnya lebih rendah */
-    transform: scale(0.9); /* Perkecil kartu lainnya */
+    transform: scale(0.8); /* Perkecil kartu lainnya */
     display: inline;
     z-index: 10;
     position: relative;
-    margin-right: -2.5%;
-    margin-left: 2.5%;
-}
-.slick-slide{
-    margin-left: 0px;
+    margin-right: -5.5%;
+    margin-left: 7%;
 }
 [aria-hidden="true"] {
     z-index: 10;

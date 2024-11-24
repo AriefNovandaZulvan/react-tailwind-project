@@ -9,7 +9,7 @@ interface LinkLableProps {
 const LinkLable: React.FC<LinkLableProps> = ({ children, className ,link }) => {
   return <a href={link} className={`${className}`}>{children} 
         <svg
-        className="w-4 h-4 ml-1"
+        className="w-4 h-4 ml-1 border-2"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"

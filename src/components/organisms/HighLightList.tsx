@@ -5,12 +5,19 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import CarouselCard from '../molecules/HighLightCard';
+import { Highlight } from '../../types/homeTypes';
 
 interface HighLightListProps {
-  items: { title: string; image: string }[];
+  highlights: Highlight[];
 }
 
-const HighLightList: React.FC<HighLightListProps> = ({ items }) => {
+const HighLightList: React.FC<HighLightListProps> = ({ highlights }) => {
+
+  if (!highlights || !Array.isArray(highlights)) {
+    // Add a fallback to avoid errors when items is not an array
+    return <div>No highlights available.</div>;
+  }
+
   const settings = {
     dots: false,
     infinite: true,
@@ -45,7 +52,7 @@ const HighLightList: React.FC<HighLightListProps> = ({ items }) => {
 
   return (
     <Slider {...settings}>
-      {items.map((item, index) => (
+      {highlights.map((item, index) => (
         <div key={index} className="pr-2">
           <CarouselCard image={item.image} title={item.title} />
         </div>

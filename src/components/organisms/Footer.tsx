@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
   
   return (
     <footer className="bg-footerBG py-8 border-t border-footerBG">
-      <div className='w-8/12 m-auto space-y-9'>
+      <div className='w-full md:w-8/12 m-auto space-y-9'>
         <div className="container mx-auto grid grid-cols-2 md:grid-cols-3 gap-6">
           <ContactInfo/>
           <div className="col-span-2 grid grid-cols-2 md:grid-cols-4 gap-4">

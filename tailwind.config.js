@@ -33,6 +33,9 @@ module.exports = {
         fadeUp: 'fadeUp 1s ease-in-out',
         fadeInUp: 'fadeInUp 1s ease-in-out',
       },
+      backgroundImage: {
+        'background-image-home': "url('/public/images/background-image-home.png)",
+      },
     },
   },
   plugins: [],
