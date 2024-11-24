@@ -16,7 +16,7 @@ const CardEmployerList: React.FC<CardEmployerListProps>  = ({employer}) => {
     <section className="m-auto mr-0 w-full md:w-11/12">
         <TightCarousel>
             {employer.map((data, index) => (
-                <div key={index}>
+                <div key={`${data.id}-${index}`}>
                     <SliderCard
                     id={data.id}
                     name={data.name}

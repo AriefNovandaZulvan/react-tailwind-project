@@ -2,6 +2,8 @@ import React from 'react';
 import MainSection from '@/components/templates/MainSection';
 import { Employer, Highlight, MainSectionProps } from '@/types/homeTypes';
 
+const baseURL = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3001';
+
 // Function to fetch employer data
 const fetchEmployerData = async (): Promise<Employer[]> => {
   const api1 = `${process.env.NEXT_PUBLIC_BASE_URL}/api/employer-data`;

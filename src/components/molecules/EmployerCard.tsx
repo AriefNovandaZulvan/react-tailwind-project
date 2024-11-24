@@ -20,7 +20,7 @@ const EmployerCard: React.FC<Employer> = ({ name, position, experience, tasks, i
           </span>
           </span>
           <ImagePlacer
-            source={profile.src}
+            source={image}
             alt={`${name}'s profile picture`}
             className="w-24 h-24 rounded-full mx-auto mb-4"
           />
@@ -30,7 +30,12 @@ const EmployerCard: React.FC<Employer> = ({ name, position, experience, tasks, i
         <SpanText className="text-blue-500 font-medium text-lg"> . ${experience}</SpanText>
         <ul className="mt-4 space-y-2">
           {tasks.map((task, index) => (
-            <ListSkill index={index} className="text-sm border-2 py-1 px-3  inline-block" task={task}/>
+            <ListSkill
+              key={`${task}-${index}`}
+              index={index}
+              className="text-sm border-2 py-1 px-3 inline-block"
+              task={task}
+            />
           ))}
         </ul>
       </div>

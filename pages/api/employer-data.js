@@ -1,4 +1,5 @@
 export default function handler(req, res) {
+    const baseURL = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3001';
     const sampleData = [
       {
         id: 1,
@@ -6,7 +7,7 @@ export default function handler(req, res) {
         position: '마케팅',
         experience: '2y+',
         tasks: ['마케팅 콘텐츠 제작', '인스타그램 관리', '트위터 관리', '블로그 글 작성'],
-        image: 'https://placehold.co/100x100',
+        image: `${baseURL}/images/pp.png`,
         flag: '🇮🇳',
       },
       {
@@ -15,7 +16,7 @@ export default function handler(req, res) {
         position: '마케팅',
         experience: '2y+',
         tasks: ['마케팅 콘텐츠 제작', '인스타그램 관리', '트위터 관리', '블로그 글 작성'],
-        image: 'https://placehold.co/100x100',
+        image: `${baseURL}/images/pp.png`,
         flag: '🇮🇳',
       },
       {
@@ -24,7 +25,7 @@ export default function handler(req, res) {
         position: '마케팅',
         experience: '2y+',
         tasks: ['마케팅 콘텐츠 제작', '인스타그램 관리', '트위터 관리', '블로그 글 작성'],
-        image: 'https://placehold.co/100x100',
+        image: `${baseURL}/images/pp.png`,
         flag: '🇮🇳',
       },
     ];
