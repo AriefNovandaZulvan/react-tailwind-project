@@ -1,5 +1,5 @@
 export default function handler(req, res) {
-  const baseURL = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3001';
+  const baseURL = process.env.NEXT_PUBLIC_BASE_URL || 'http://sipalingtech.com:3001';
   const items = [
     { title: '해외 마케팅', image: `${baseURL}/images/f-1.png` },
     { title: '퍼블리셔', image: `${baseURL}/images/f-2.png` },
